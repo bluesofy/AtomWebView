@@ -12,7 +12,7 @@
 ```Gradle
 api 'cn.byk.pandora:atomwebview:1.0.0'
 ```
-<br>
+
 #### 使用方法
 - 直接在布局中使用或者继承后使用都可以
 ```XML
@@ -21,12 +21,13 @@ api 'cn.byk.pandora:atomwebview:1.0.0'
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 ```
-
+<br>
 - 自定义WebChromeClient需要继承AtomWebChromeClient，类似的，自定义WebViewClient需要继承AtomWebViewClient
-
+<br>
 - 主要API说明
 ```Java
-// 调用Js方法，API19以下调用loadUrl()，19以上调用evaluateJavascript()，可带回调
+// 调用Js方法，API19以下调用loadUrl()，19以上调用evaluateJavascript()，
+// 区别，loadUrl会重载网页，evaluateJavascript不会，且自带回调
 invokeJs(final String jsMethod, final ValueCallback<String> callback)
 
 // 滑动监听，可监听到底事件
@@ -49,9 +50,9 @@ close()
 // Js调用Android方法监听，注意IJsBridge的onReceive带String结果值返回，可回调数据给网页Js
 setJsBridge(IJsBridge bridge)
 ```
-
+<br>
 - 已实现的原生方法调用说明，以后可能会以atoms的scheme扩充
-````JavaScript
+```JavaScript
 // 注意这个是写在Js里的，function名字无所谓
 function callAndroid() {
     // 打开网页（调起第三方浏览器）
@@ -73,10 +74,10 @@ function callAndroid() {
     // 打开第三方App，写入第三方App的scheme即可
     var result = prompt("tbopen://xxx?xxx=1");
 }
-````
-
+```
+<br>
 - 如果都不在以上已实现的原生方法调用中，或者打开第三方App失败，会抛出AtomResult自定义处理
-````Java
+```Java
 public class AtomResult {
 
     // uri.getScheme()
@@ -93,10 +94,10 @@ public class AtomResult {
     // Js.prompt传入的完整String数据
     private String content;
 }
-````
-
+```
+<br>
 - 如果需要增加加载进度条，可继承AtomWebChromeClient
-````Java
+```Java
 // 让进度条控件实现接口
 public interface IProgress {
     void onProgress(int progress);
@@ -105,10 +106,10 @@ public interface IProgress {
 
 // 重写
 public IProgress progress()
-````
-
+```
+<br>
 - 如果需要自定义加载错误页面，可继承AtomWebViewClient
-````Java
+```Java
 // 让自定义View实现接口
 public interface IErrorView {
     void onError(WebView webView, int errorCode, String desc, String errorUrl);
@@ -116,7 +117,7 @@ public interface IErrorView {
 
 // 重写
 public IErrorView errorView()
-````
+```
 
 
 ### 关于混淆  ProGuard
