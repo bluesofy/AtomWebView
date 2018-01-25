@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AtomWebView.Sample</title>
+    <script>
+       function callJs(){
+          alert("Android Call Js");
+       }
+
+       function callAndroid(){
+           var result=prompt("atoms://camera?request=1");
+       }
+    </script>
+</head>
+<body>
+<button type="button" id="button1" onclick="callAndroid()">Invoke Android Method</button>
+</body>
+</html>

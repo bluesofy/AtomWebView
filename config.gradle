@@ -1,0 +1,39 @@
+ext {
+    // Sdk and tools
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.2'
+    minSdkVersion = 16
+    targetSdkVersion = 27
+
+    // Libs dependencies
+    supportLibraryVersion = '27.0.2'
+    junitVersion = '4.12'
+    runnerVersion = '1.0'
+    espressoVersion = '3.0.1'
+
+    // version
+    versionCode = '100'
+
+    // Bin-tray
+    bintrayRepo = 'maven'
+    bintrayName = 'AtomWebView'
+
+    publishedGroupId = 'cn.byk.pandora'
+    artifact = 'atomwebview'
+    libraryName = 'AtomWebView'
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'Smart WebView Lib Base on Tencent X5'
+
+    siteUrl = 'https://github.com/bluesofy/AtomWebView'
+    gitUrl = 'https://github.com/bluesofy/AtomWebView.git'
+    javaDocUrl = 'https://github.com/bluesofy/AtomWebView/tree/master/Atomwebview/docs/javadoc'
+
+    developerId = 'bluesofy'
+    developerName = 'Byk'
+    developerEmail = 'bluesofy@live.cn'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
