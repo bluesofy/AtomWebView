@@ -21,9 +21,9 @@ api 'cn.byk.pandora:atomwebview:1.0.0'
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 ```
-<br>
+
 - 自定义WebChromeClient需要继承AtomWebChromeClient，类似的，自定义WebViewClient需要继承AtomWebViewClient
-<br>
+
 - 主要API说明
 ```Java
 // 调用Js方法，API19以下调用loadUrl()，19以上调用evaluateJavascript()，
@@ -50,7 +50,7 @@ close()
 // Js调用Android方法监听，注意IJsBridge的onReceive带String结果值返回，可回调数据给网页Js
 setJsBridge(IJsBridge bridge)
 ```
-<br>
+
 - 已实现的原生方法调用说明，以后可能会以atoms的scheme扩充
 ```JavaScript
 // 注意这个是写在Js里的，function名字无所谓
@@ -75,7 +75,7 @@ function callAndroid() {
     var result = prompt("tbopen://xxx?xxx=1");
 }
 ```
-<br>
+
 - 如果都不在以上已实现的原生方法调用中，或者打开第三方App失败，会抛出AtomResult自定义处理
 ```Java
 public class AtomResult {
@@ -95,7 +95,7 @@ public class AtomResult {
     private String content;
 }
 ```
-<br>
+
 - 如果需要增加加载进度条，可继承AtomWebChromeClient
 ```Java
 // 让进度条控件实现接口
@@ -107,7 +107,7 @@ public interface IProgress {
 // 重写
 public IProgress progress()
 ```
-<br>
+
 - 如果需要自定义加载错误页面，可继承AtomWebViewClient
 ```Java
 // 让自定义View实现接口
