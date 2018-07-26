@@ -1,18 +1,18 @@
 ext {
     // Sdk and tools
     compileSdkVersion = 27
-    buildToolsVersion = '27.0.2'
+    buildToolsVersion = '28.0.0'
     minSdkVersion = 16
     targetSdkVersion = 27
 
     // Libs dependencies
-    supportLibraryVersion = '27.0.2'
+    supportLibraryVersion = '27.1.1'
     junitVersion = '4.12'
-    runnerVersion = '1.0'
-    espressoVersion = '3.0.1'
+    runnerVersion = '1.0.2'
+    espressoVersion = '3.0.2'
 
     // version
-    versionCode = '100'
+    versionCode = '101'
 
     // Bin-tray
     bintrayRepo = 'maven'
@@ -21,7 +21,7 @@ ext {
     publishedGroupId = 'cn.byk.pandora'
     artifact = 'atomwebview'
     libraryName = 'AtomWebView'
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     libraryDescription = 'Smart WebView Lib Base on Tencent X5'
 

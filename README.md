@@ -10,7 +10,7 @@
 ### 使用说明  Usage
 #### 添加依赖
 ```Gradle
-api 'cn.byk.pandora:atomwebview:1.0.0'
+api 'cn.byk.pandora:atomwebview:1.0.1'
 ```
 
 #### 使用方法

@@ -28,7 +28,8 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
 
-    implementation 'cn.byk.pandora:atomwebview:1.0.0'
+//    implementation project(":atomwebview")
+    implementation 'cn.byk.pandora:atomwebview:1.0.1'
 
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
 }
