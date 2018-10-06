@@ -21,7 +21,7 @@ javadoc {
         author true
         version true
         links javaDocUrl
-        title libraryDescription
+        title "$libraryName $libraryVersion"
     }
 }
 
@@ -71,6 +71,10 @@ bintray {
             name = libraryVersion
             desc = libraryDescription
             vcsTag = libraryVersion
+
+            gpg {
+                sign = true
+            }
         }
     }
 }
